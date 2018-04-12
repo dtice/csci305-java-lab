@@ -1,3 +1,7 @@
+/**
+ * A class for storing the outcome of a RPSLS game
+ */
+
 package csci305.javalab;
 
 public class Outcome

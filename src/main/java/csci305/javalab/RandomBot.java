@@ -1,3 +1,6 @@
+/**
+ * A bot that randomly selects a move
+ */
 package csci305.javalab;
 
 import java.util.Random;
@@ -6,28 +9,29 @@ public class RandomBot extends Player{
 	public RandomBot(String name){
 		super(name);
 	}
+	//Selects a random move
 	@Override
 	public Element play(){
 		Random rand = new Random();
-		int r = rand.nextInt(5) + 1;
+		int r = rand.nextInt(5);
 		switch(r){
 		//Rock
 		case 1:
-			return new Rock("Rock");
+			return Main.moves.get("Rock");
 		//Paper
 		case 2:
-			return new Paper("Paper");
+			return Main.moves.get("Paper");
 		//Scissors
 		case 3:
-			return new Scissors("Scissors");
+			return Main.moves.get("Scissors");
 		//Lizard
 		case 4:
-			return new Lizard("Lizard");
+			return Main.moves.get("Lizard");
 		//Spock
 		case 5:
-			return new Spock("Spock");
+			return Main.moves.get("Spock");
 		default:
-			return new Rock("Rock");
+			return Main.moves.get("Rock");
 		}
 	}
 }

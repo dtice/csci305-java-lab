@@ -1,3 +1,6 @@
+/**
+ * Paper
+ */
 package csci305.javalab;
 
 public class Paper extends Element{

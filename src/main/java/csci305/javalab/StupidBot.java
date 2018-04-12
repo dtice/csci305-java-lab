@@ -6,6 +6,6 @@ public class StupidBot extends Player{
 	}
 	@Override
 	public Element play(){
-		return new Rock("Rock");
+		return Main.moves.get("Rock");
 	}
 }

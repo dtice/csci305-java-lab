@@ -1,3 +1,6 @@
+/**
+ * A class for a human player in the RPSLS game
+ */
 package csci305.javalab;
 
 import java.util.Scanner;
@@ -9,7 +12,7 @@ public class Human extends Player {
 	@SuppressWarnings("resource")
 	@Override
 	public Element play(){
-		System.out.println("(1) : Rock \n (2) : Paper \n (3) : Scissors \n (4) : Lizard \n (5) : Spock");
+		System.out.println("\n(1) : Rock \n (2) : Paper \n (3) : Scissors \n (4) : Lizard \n (5) : Spock");
 		boolean valid = false;
 		while(!valid){
 			Scanner in = new Scanner(System.in);
@@ -21,21 +24,21 @@ public class Human extends Player {
 				switch(choice){
 				//Rock
 				case 1:
-					return new Rock("Rock");
+					return Main.moves.get("Rock");
 				//Paper
 				case 2:
-					return new Paper("Paper");
+					return Main.moves.get("Paper");
 				//Scissors
 				case 3:
-					return new Scissors("Scissors");
+					return Main.moves.get("Scissors");
 				//Lizard
 				case 4:
-					return new Lizard("Lizard");
+					return Main.moves.get("Lizard");
 				//Spock
 				case 5:
-					return new Spock("Spock");
+					return Main.moves.get("Spock");
 				default:
-					return new Rock("Rock");
+					return Main.moves.get("Rock");
 				}
 			}
 			in.close();

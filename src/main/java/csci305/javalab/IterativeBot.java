@@ -1,3 +1,6 @@
+/**
+ * A bot that selects moves in order
+ */
 package csci305.javalab;
 
 public class IterativeBot extends Player{
@@ -5,6 +8,7 @@ public class IterativeBot extends Player{
 	public IterativeBot(String name){
 		super(name);
 	}
+	//Selects moves in order
 	@Override
 	public Element play(){
 		if(choice > 5) choice = 1;
@@ -12,25 +16,25 @@ public class IterativeBot extends Player{
 			//Rock
 			case 1:
 				choice++;
-				return new Rock("Rock");
+				return Main.moves.get("Rock");
 			//Paper
 			case 2:
 				choice++;
-				return new Paper("Paper");
+				return Main.moves.get("Paper");
 			//Scissors
 			case 3:
 				choice++;
-				return new Scissors("Scissors");
+				return Main.moves.get("Scissors");
 			//Lizard
 			case 4:
 				choice++;
-				return new Lizard("Lizard");
+				return Main.moves.get("Lizard");
 			//Spock
 			case 5:
 				choice++;
-				return new Spock("Spock");
+				return Main.moves.get("Spock");
 			default:
-				return new Rock("Rock");
+				return Main.moves.get("Rock");
 		}
 	}
 }

@@ -1,3 +1,6 @@
+/**
+ * An abstract class that the player classes inherit from
+ */
 package csci305.javalab;
 
 public abstract class Player {
