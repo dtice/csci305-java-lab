@@ -7,6 +7,13 @@ public class Outcome
 	public Outcome(String action, String result){
 		this.action = action;
 		this.result = result;
-		System.out.println(action + " -- " + result);
+	}
+	public String getAction()
+	{
+		return action;
+	}
+	public String getResult()
+	{
+		return result;
 	}
 }

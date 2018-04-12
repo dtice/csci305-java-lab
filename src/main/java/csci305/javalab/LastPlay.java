@@ -7,6 +7,6 @@ public class LastPlay extends Player{
 	@Override
 	public Element play(){
 		//Always plays last move player made
-		
+		return new Rock("rock");
 	}
 }
